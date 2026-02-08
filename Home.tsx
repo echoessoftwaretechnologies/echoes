@@ -90,22 +90,18 @@ const Home: React.FC = () => {
                                             href="https://forms.gle/K3LySpfU6YYvQKGj9"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center justify-center premium-gradient text-white px-10 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all"
+                                            className="inline-flex items-center justify-center premium-gradient text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all gap-2"
                                         >
-                                            <span className="flex items-center gap-3">
-                                                Get Started Now
-                                                <i data-lucide="arrow-right" className="w-5 h-5"></i>
-                                            </span>
+                                            Get Started Now
+                                            <i data-lucide="arrow-right" className="w-5 h-5"></i>
                                         </a>
 
                                         <Link
                                             to="/services"
-                                            className="inline-flex items-center justify-center bg-white border-2 border-gray-300 hover:border-brand-blue-400 text-navy-800 hover:text-brand-blue-600 px-10 py-5 rounded-full font-bold text-lg transition-all hover:shadow-lg hover:-translate-y-1"
+                                            className="inline-flex items-center justify-center bg-white border border-gray-200 hover:border-brand-blue-400 text-navy-800 hover:text-brand-blue-600 px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider transition-all hover:shadow-lg hover:-translate-y-1 gap-2"
                                         >
-                                            <span className="flex items-center gap-3">
-                                                Our Services
-                                                <i data-lucide="sparkles" className="w-5 h-5"></i>
-                                            </span>
+                                            Our Services
+                                            <i data-lucide="sparkles" className="w-5 h-5"></i>
                                         </Link>
                                     </div>
 
