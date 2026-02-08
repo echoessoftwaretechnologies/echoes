@@ -284,12 +284,12 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section >
 
 
 
                 {/* Capability Section */}
-                <section className="bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/20 py-32 relative overflow-hidden">
+                < section className="bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/20 py-32 relative overflow-hidden" >
                     <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
                         <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-200/20 rounded-full blur-[120px]"></div>
                         <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-purple-200/20 rounded-full blur-[120px]"></div>
@@ -359,10 +359,10 @@ const Home: React.FC = () => {
                             ))}
                         </div>
                     </div>
-                </section>
+                </section >
 
                 {/* ROI Section */}
-                <section className="bg-white py-32 relative overflow-hidden">
+                < section className="bg-white py-32 relative overflow-hidden" >
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         <div className="grid lg:grid-cols-2 gap-24 items-center">
                             <div className="space-y-12 text-left">
@@ -399,13 +399,13 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section >
 
                 {/* FAQ Section */}
-                <FAQ />
+                < FAQ />
 
                 {/* Comprehensive Footer */}
-                <footer className="bg-gradient-to-br from-navy-950 to-navy-900 text-white relative overflow-hidden py-20">
+                < footer className="bg-gradient-to-br from-navy-950 to-navy-900 text-white relative overflow-hidden py-20" >
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                             {/* Company Info */}
@@ -508,31 +508,33 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                </footer>
-            </main>
+                </footer >
+            </main >
 
             {/* Contact Modal */}
-            {isContactModalOpen && (
-                <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 backdrop-blur-sm">
-                    <div className="bg-white rounded-3xl shadow-2xl w-full max-w-md relative overflow-hidden border border-gray-200">
-                        <div className="bg-gradient-to-r from-brand-blue-600 to-indigo-600 p-8 text-white">
-                            <h3 className="text-2xl font-black uppercase tracking-tight">Contact Us</h3>
+            {
+                isContactModalOpen && (
+                    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 backdrop-blur-sm">
+                        <div className="bg-white rounded-3xl shadow-2xl w-full max-w-md relative overflow-hidden border border-gray-200">
+                            <div className="bg-gradient-to-r from-brand-blue-600 to-indigo-600 p-8 text-white">
+                                <h3 className="text-2xl font-black uppercase tracking-tight">Contact Us</h3>
+                            </div>
+                            <div className="p-8">
+                                <form onSubmit={handleFormSubmit} className="space-y-6">
+                                    <input className="w-full bg-gray-50 border border-gray-200 rounded-2xl px-6 py-4 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-blue-500" placeholder="Your Name" required />
+                                    <input className="w-full bg-gray-50 border border-gray-200 rounded-2xl px-6 py-4 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-blue-500" placeholder="Email Address" type="email" required />
+                                    <textarea className="w-full bg-gray-50 border border-gray-200 rounded-2xl px-6 py-4 text-navy-900 h-32 focus:outline-none focus:ring-2 focus:ring-brand-blue-500" placeholder="Your Message..." required />
+                                    <button type="submit" className="w-full premium-gradient py-5 rounded-full font-black uppercase tracking-widest text-white shadow-lg hover:shadow-xl transition-all">Send Message</button>
+                                </form>
+                            </div>
+                            <button onClick={closeContactModal} className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-white transition-all">
+                                <i data-lucide="x" className="w-5 h-5"></i>
+                            </button>
                         </div>
-                        <div className="p-8">
-                            <form onSubmit={handleFormSubmit} className="space-y-6">
-                                <input className="w-full bg-gray-50 border border-gray-200 rounded-2xl px-6 py-4 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-blue-500" placeholder="Your Name" required />
-                                <input className="w-full bg-gray-50 border border-gray-200 rounded-2xl px-6 py-4 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-blue-500" placeholder="Email Address" type="email" required />
-                                <textarea className="w-full bg-gray-50 border border-gray-200 rounded-2xl px-6 py-4 text-navy-900 h-32 focus:outline-none focus:ring-2 focus:ring-brand-blue-500" placeholder="Your Message..." required />
-                                <button type="submit" className="w-full premium-gradient py-5 rounded-full font-black uppercase tracking-widest text-white shadow-lg hover:shadow-xl transition-all">Send Message</button>
-                            </form>
-                        </div>
-                        <button onClick={closeContactModal} className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-white transition-all">
-                            <i data-lucide="x" className="w-5 h-5"></i>
-                        </button>
                     </div>
-                </div>
-            )}
-        </div>
+                )
+            }
+        </div >
     );
 };
 
