@@ -1,127 +1,154 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 
-declare global {
-    interface Window {
-        lucide: any;
-    }
-}
-
 const PrivacyPolicy: React.FC = () => {
-    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
-        <div className="bg-white text-navy-900 min-h-screen" style={{ fontFamily: "'Outfit', sans-serif" }}>
+        <div className="bg-white text-navy-900 min-h-screen selection:bg-brand-blue-100 selection:text-brand-blue-900" style={{ fontFamily: "'Outfit', sans-serif" }}>
             <Navbar currentPage="Privacy Policy" />
 
             <main className="pt-20">
                 {/* Hero Section */}
-                <section className="bg-gradient-to-br from-brand-blue-600 to-indigo-700 dark:from-brand-blue-800 dark:to-indigo-900 py-20 lg:py-32 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLW9wYWNpdHk9IjAuMDUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                        <div className="text-center">
-                            <h1 className="text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight">Privacy Policy</h1>
-                            <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto font-light">Learn how we collect, use, and protect your personal information when you use our services.</p>
+                <section className="bg-gradient-to-br from-brand-blue-600 to-indigo-700 py-32 relative overflow-hidden">
+                    {/* Background Patterns */}
+                    <div className="absolute inset-0 opacity-20">
+                        <div className="absolute -top-24 -left-24 w-96 h-96 bg-white rounded-full blur-[100px]" />
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/10 rounded-full" />
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/10 rounded-full" />
+                        <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-purple-500 rounded-full blur-[100px]" />
+                    </div>
+
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white/90 text-sm font-bold uppercase tracking-widest mb-8 border border-white/20">
+                            <i data-lucide="shield" className="w-4 h-4"></i>
+                            <span>Legal & Compliance</span>
                         </div>
+                        <h1 className="text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-8 tracking-tight drop-shadow-sm">
+                            Privacy Policy
+                        </h1>
+                        <p className="text-xl text-blue-50 max-w-2xl mx-auto font-light leading-relaxed">
+                            We are committed to protecting your personal data and ensuring transparency in how we handle your information.
+                        </p>
                     </div>
                 </section>
 
                 {/* Content Section */}
-                <section className="py-20 bg-white dark:bg-navy-950 transition-colors duration-500">
-                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="prose prose-lg max-w-none">
-                            <h2 className="text-3xl font-bold text-navy-950 dark:text-white mb-6">Last Updated: December 28, 2025</h2>
+                <section className="py-24 bg-gray-50 relative">
+                    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="bg-white rounded-[2.5rem] shadow-xl shadow-gray-200/50 p-8 md:p-16 border border-gray-100">
 
-                            <p className="text-navy-600 dark:text-navy-300 mb-6 leading-relaxed">Echoes Software Technologies ("we", "our", "us") respects your privacy and is committed to protecting the personal information of our users, clients, and visitors. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our websites, applications, products, and services (collectively, the "Services").</p>
-
-                            <p className="text-navy-600 dark:text-navy-300 mb-6 leading-relaxed">By using our Services, you agree to the practices described in this Privacy Policy.</p>
-
-                            <h3 className="text-2xl font-bold text-navy-950 dark:text-white mt-12 mb-4">1. Information We Collect</h3>
-                            <p className="text-navy-600 dark:text-navy-300 mb-4">We may collect the following types of information:</p>
-
-                            <h4 className="text-xl font-semibold text-navy-950 dark:text-white mt-6 mb-3">1.1 Personal Information</h4>
-                            <p className="text-navy-600 dark:text-navy-300 mb-4">Information that can identify you, such as:</p>
-                            <ul className="list-disc list-inside text-navy-600 dark:text-navy-300 mb-6 space-y-2 ml-4">
-                                <li>Name</li>
-                                <li>Email address</li>
-                                <li>Phone number</li>
-                                <li>Company or organization name</li>
-                                <li>Account login credentials (if applicable)</li>
-                            </ul>
-
-                            <h4 className="text-xl font-semibold text-navy-950 dark:text-white mt-6 mb-3">1.2 Technical and Usage Information</h4>
-                            <p className="text-navy-600 dark:text-navy-300 mb-4">Automatically collected information, including:</p>
-                            <ul className="list-disc list-inside text-navy-600 dark:text-navy-300 mb-6 space-y-2 ml-4">
-                                <li>IP address</li>
-                                <li>Browser type and version</li>
-                                <li>Device information</li>
-                                <li>Operating system</li>
-                                <li>Pages visited, time spent, and interaction data</li>
-                            </ul>
-
-                            <h4 className="text-xl font-semibold text-navy-950 dark:text-white mt-6 mb-3">1.3 Cookies and Similar Technologies</h4>
-                            <p className="text-navy-600 dark:text-navy-300 mb-6">We may use cookies and similar tracking technologies to improve functionality, analyze usage, and enhance user experience. You can control cookies through your browser settings.</p>
-
-                            <h3 className="text-2xl font-bold text-navy-950 dark:text-white mt-12 mb-4">2. How We Use Your Information</h3>
-                            <p className="text-navy-600 dark:text-navy-300 mb-4">We use the collected information to:</p>
-                            <ul className="list-disc list-inside text-navy-600 dark:text-navy-300 mb-6 space-y-2 ml-4">
-                                <li>Provide, operate, and maintain our Services</li>
-                                <li>Improve and personalize user experience</li>
-                                <li>Communicate with you, including support and service-related messages</li>
-                                <li>Process transactions and manage accounts</li>
-                                <li>Ensure security and prevent fraud</li>
-                                <li>Comply with legal and regulatory obligations</li>
-                            </ul>
-
-                            <h3 className="text-2xl font-bold text-navy-950 dark:text-white mt-12 mb-4">3. Sharing and Disclosure of Information</h3>
-                            <p className="text-navy-600 dark:text-navy-300 mb-4">We do not sell or rent your personal information. We may share information only in the following circumstances:</p>
-
-                            <ul className="list-disc list-inside text-navy-600 dark:text-navy-300 mb-6 space-y-2 ml-4">
-                                <li><strong className="text-navy-950 dark:text-white">Service Providers:</strong> With trusted third-party vendors who perform services on our behalf (e.g., hosting, analytics, customer support)</li>
-                                <li><strong className="text-navy-950 dark:text-white">Legal Requirements:</strong> When required by law, regulation, or legal process</li>
-                                <li><strong className="text-navy-950 dark:text-white">Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets</li>
-                                <li><strong className="text-navy-950 dark:text-white">With Consent:</strong> When you explicitly consent to sharing</li>
-                            </ul>
-
-                            <h3 className="text-2xl font-bold text-navy-950 dark:text-white mt-12 mb-4">4. Data Security</h3>
-                            <p className="text-navy-600 dark:text-navy-300 mb-6">We implement reasonable administrative, technical, and organizational measures to protect your information from unauthorized access, loss, misuse, or disclosure. However, no method of transmission over the internet or electronic storage is completely secure.</p>
-
-                            <h3 className="text-2xl font-bold text-navy-950 dark:text-white mt-12 mb-4">5. Data Retention</h3>
-                            <p className="text-navy-600 dark:text-navy-300 mb-6">We retain personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law.</p>
-
-                            <h3 className="text-2xl font-bold text-navy-950 dark:text-white mt-12 mb-4">6. Your Rights and Choices</h3>
-                            <p className="text-navy-600 dark:text-navy-300 mb-4">Depending on applicable laws, you may have the right to:</p>
-                            <ul className="list-disc list-inside text-navy-600 dark:text-navy-300 mb-6 space-y-2 ml-4">
-                                <li>Access the personal information we hold about you</li>
-                                <li>Request correction or deletion of your information</li>
-                                <li>Withdraw consent where processing is based on consent</li>
-                                <li>Object to or restrict certain processing activities</li>
-                            </ul>
-                            <p className="text-navy-600 dark:text-navy-300 mb-6">To exercise these rights, please contact us using the details below.</p>
-
-                            <h3 className="text-2xl font-bold text-navy-950 dark:text-white mt-12 mb-4">7. Third-Party Links</h3>
-                            <p className="text-navy-600 dark:text-navy-300 mb-6">Our Services may contain links to third-party websites or services. We are not responsible for the privacy practices or content of those third parties.</p>
-
-                            <h3 className="text-2xl font-bold text-navy-950 dark:text-white mt-12 mb-4">8. Children's Privacy</h3>
-                            <p className="text-navy-600 dark:text-navy-300 mb-6">Our Services are not directed to children under the age of 13. We do not knowingly collect personal information from children. If we become aware that such information has been collected, we will take appropriate steps to delete it.</p>
-
-                            <h3 className="text-2xl font-bold text-navy-950 dark:text-white mt-12 mb-4">9. Changes to This Privacy Policy</h3>
-                            <p className="text-navy-600 dark:text-navy-300 mb-6">We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last Updated" date. Continued use of the Services after changes indicates acceptance of the revised policy.</p>
-
-                            <h3 className="text-2xl font-bold text-navy-950 dark:text-white mt-12 mb-4">10. Contact Us</h3>
-                            <p className="text-navy-600 dark:text-navy-300 mb-4">If you have any questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
-                            <div className="bg-navy-50 dark:bg-navy-900/50 border border-navy-100 dark:border-white/5 p-8 rounded-2xl mb-8">
-                                <p className="text-navy-900 dark:text-white font-bold mb-2">Echoes Software Technologies</p>
-                                <p className="text-navy-700 dark:text-navy-300"><strong className="text-navy-900 dark:text-white">Email:</strong> echoessoftwaretech@gmail.com</p>
+                            <div className="flex items-center justify-between border-b border-gray-100 pb-8 mb-12">
+                                <div>
+                                    <p className="text-sm font-bold text-navy-400 uppercase tracking-widest mb-1">Effective Date</p>
+                                    <p className="text-navy-900 font-semibold">December 28, 2025</p>
+                                </div>
+                                <div className="text-right">
+                                    <p className="text-sm font-bold text-navy-400 uppercase tracking-widest mb-1">Version</p>
+                                    <p className="text-navy-900 font-semibold">2.0</p>
+                                </div>
                             </div>
+
+                            <article className="prose prose-lg prose-headings:text-navy-950 prose-p:text-navy-600 prose-a:text-brand-blue-600 prose-li:text-navy-600 max-w-none">
+                                <p className="lead text-xl text-navy-700 font-light mb-12">
+                                    Echoes Software Technologies ("we", "our", "us") respects your privacy and is committed to protecting the personal information of our users, clients, and visitors. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our websites, applications, products, and services.
+                                </p>
+
+                                <div className="grid md:grid-cols-2 gap-8 my-12 not-prose">
+                                    <div className="bg-blue-50 p-8 rounded-3xl border border-blue-100">
+                                        <div className="w-12 h-12 bg-brand-blue-100 text-brand-blue-600 rounded-xl flex items-center justify-center mb-6">
+                                            <i data-lucide="database" className="w-6 h-6"></i>
+                                        </div>
+                                        <h4 className="text-xl font-bold text-navy-900 mb-3">Data Collection</h4>
+                                        <p className="text-navy-600 text-sm">We collect only essential information required to provide our superior services.</p>
+                                    </div>
+                                    <div className="bg-green-50 p-8 rounded-3xl border border-green-100">
+                                        <div className="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-6">
+                                            <i data-lucide="lock" className="w-6 h-6"></i>
+                                        </div>
+                                        <h4 className="text-xl font-bold text-navy-900 mb-3">Data Security</h4>
+                                        <p className="text-navy-600 text-sm">Your data is protected by enterprise-grade encryption and security protocols.</p>
+                                    </div>
+                                </div>
+
+                                <h3>1. Information We Collect</h3>
+                                <p>We may collect the following types of information to provide better services to all our users:</p>
+
+                                <div className="pl-4 border-l-4 border-brand-blue-200 my-6">
+                                    <h4 className="text-lg font-bold text-navy-900 mb-2">Personal Information</h4>
+                                    <p className="mb-0 text-sm">Identify information such as Name, Email address, Phone number, Company name, and Account login credentials.</p>
+                                </div>
+
+                                <div className="pl-4 border-l-4 border-purple-200 my-6">
+                                    <h4 className="text-lg font-bold text-navy-900 mb-2">Technical Data</h4>
+                                    <p className="mb-0 text-sm">IP address, Browser type, Device information, Operating system, and usage statistics.</p>
+                                </div>
+
+                                <h3>2. How We Use Your Information</h3>
+                                <ul className="marker:text-brand-blue-500">
+                                    <li><strong>Service Delivery:</strong> To provide, operate, and maintain our Services.</li>
+                                    <li><strong>Improvement:</strong> To improve, personalize, and expand our website and services.</li>
+                                    <li><strong>Communication:</strong> To understand and analyze how you use our website and communicate with you.</li>
+                                    <li><strong>Security:</strong> To develop new products, services, features, and functionality and prevent fraud.</li>
+                                </ul>
+
+                                <h3>3. Sharing of Information</h3>
+                                <p>We do not sell your personal data. We may share information with:</p>
+                                <ul>
+                                    <li><strong>Trusted Service Providers:</strong> Who assist us in operating our website and conducting our business.</li>
+                                    <li><strong>Legal Compliance:</strong> When required to comply with the law or response to valid legal requests.</li>
+                                    <li><strong>Business Transfers:</strong> In connection with any merger, sale of company assets, or acquisition.</li>
+                                </ul>
+
+                                <h3>4. Your Data Rights</h3>
+                                <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+                                <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 not-prose grid gap-4">
+                                    <div className="flex items-center gap-3">
+                                        <i data-lucide="check-circle" className="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                                        <span className="text-navy-700 font-medium">The right to access and update your data</span>
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <i data-lucide="check-circle" className="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                                        <span className="text-navy-700 font-medium">The right to request deletion (Right to be Forgotten)</span>
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <i data-lucide="check-circle" className="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                                        <span className="text-navy-700 font-medium">The right to data portability</span>
+                                    </div>
+                                </div>
+
+                                <h3 className="mt-12">Contact Us</h3>
+                                <p>If you have any questions about this Privacy Policy, please contact us:</p>
+
+                                <div className="bg-navy-900 text-white p-8 rounded-3xl not-prose shadow-lg mt-8">
+                                    <div className="flex items-start gap-4">
+                                        <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <i data-lucide="mail" className="w-6 h-6 text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h4 className="text-xl font-bold text-white mb-2">Privacy Team</h4>
+                                            <p className="text-blue-100 mb-4">For any privacy-related inquiries or requests.</p>
+                                            <a href="mailto:echoessoftwaretech@gmail.com" className="text-white hover:text-brand-blue-300 font-bold underline decoration-brand-blue-400 underline-offset-4 transition-colors">
+                                                echoessoftwaretech@gmail.com
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </article>
                         </div>
                     </div>
                 </section>
             </main>
 
-            {/* Premium Footer */}
-            {/* Comprehensive Footer */}
+            {/* Comprehensive Footer - Exactly matching Home.tsx */}
             <footer className="bg-gradient-to-br from-navy-950 to-navy-900 text-white relative overflow-hidden py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
@@ -132,37 +159,16 @@ const PrivacyPolicy: React.FC = () => {
                                 Precision-built enterprise software solutions driving digital transformation worldwide.
                             </p>
                             <div className="flex gap-4">
-                                {/* LinkedIn */}
-                                <a
-                                    href="https://www.linkedin.com/company/echoes-software-solutions/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all hover:scale-110"
-                                >
+                                <a href="https://www.linkedin.com/company/echoes-software-solutions/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all hover:scale-110">
                                     <i data-lucide="linkedin" className="w-5 h-5"></i>
                                 </a>
-
-                                {/* Instagram */}
-                                <a
-                                    href="https://www.instagram.com/echoes_software_technologies?igsh=OW1xOGpmMzZmZ3Bq"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all hover:scale-110"
-                                >
+                                <a href="https://www.instagram.com/echoes_software_technologies?igsh=OW1xOGpmMzZmZ3Bq" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all hover:scale-110">
                                     <i data-lucide="instagram" className="w-5 h-5"></i>
                                 </a>
-
-                                {/* WhatsApp */}
-                                <a
-                                    href="https://wa.me/918148549511"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all hover:scale-110"
-                                >
+                                <a href="https://wa.me/918148549511" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all hover:scale-110">
                                     <i data-lucide="message-circle" className="w-5 h-5"></i>
                                 </a>
                             </div>
-
                         </div>
 
                         {/* Quick Links */}
