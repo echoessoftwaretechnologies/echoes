@@ -537,9 +537,9 @@ const Services: React.FC = () => {
                                 </div>
 
                                 <a href="./Echoes Software Technologies.apk" download
-                                    className="inline-flex items-center justify-center premium-gradient text-white font-black px-10 py-5 rounded-full transition-all duration-500 transform hover:scale-105 hover:shadow-premium shadow-xl shadow-brand-blue-200 text-lg uppercase tracking-widest w-full sm:w-auto">
-                                    <Download className="w-5 h-5 mr-3" />
-                                    Download
+                                    className="inline-flex items-center justify-center premium-gradient text-white font-bold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-premium shadow-lg shadow-brand-blue-200/50 text-sm uppercase tracking-wider w-full sm:w-auto gap-2">
+                                    <Download className="w-5 h-5" />
+                                    Download App
                                 </a>
                             </div>
 
