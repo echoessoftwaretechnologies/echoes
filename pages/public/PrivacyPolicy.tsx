@@ -17,59 +17,59 @@ const PrivacyPolicy: React.FC = () => {
 
             <main className="pt-20">
                 {/* Hero Section */}
-                <section className="bg-gradient-to-br from-brand-blue-600 to-indigo-700 py-32 relative overflow-hidden">
+                <section className="bg-gradient-to-br from-brand-blue-600 to-indigo-700 py-20 lg:py-32 relative overflow-hidden">
                     {/* Background Patterns */}
-                    <div className="absolute inset-0 opacity-20">
-                        <div className="absolute -top-24 -left-24 w-96 h-96 bg-white rounded-full blur-[100px]" />
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/10 rounded-full" />
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/10 rounded-full" />
-                        <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-purple-500 rounded-full blur-[100px]" />
+                    <div className="absolute inset-0 opacity-20 pointer-events-none">
+                        <div className="absolute -top-24 -left-24 w-64 h-64 lg:w-96 lg:h-96 bg-white rounded-full blur-[100px]" />
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] lg:w-[800px] lg:h-[800px] border border-white/10 rounded-full" />
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[600px] lg:h-[600px] border border-white/10 rounded-full" />
+                        <div className="absolute -bottom-24 -right-24 w-64 h-64 lg:w-96 lg:h-96 bg-purple-500 rounded-full blur-[100px]" />
                     </div>
 
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white/90 text-sm font-bold uppercase tracking-widest mb-8 border border-white/20">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white/90 text-sm font-bold uppercase tracking-widest mb-6 lg:mb-8 border border-white/20">
                             <i data-lucide="shield" className="w-4 h-4"></i>
                             <span>Legal & Compliance</span>
                         </div>
-                        <h1 className="text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-8 tracking-tight drop-shadow-sm">
+                        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6 lg:mb-8 tracking-tight drop-shadow-sm">
                             Privacy Policy
                         </h1>
-                        <p className="text-xl text-blue-50 max-w-2xl mx-auto font-light leading-relaxed">
+                        <p className="text-lg lg:text-xl text-blue-50 max-w-2xl mx-auto font-light leading-relaxed px-4">
                             We are committed to protecting your personal data and ensuring transparency in how we handle your information.
                         </p>
                     </div>
                 </section>
 
                 {/* Content Section */}
-                <section className="py-24 bg-gray-50 relative">
+                <section className="py-12 lg:py-24 bg-gray-50 relative">
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="bg-white rounded-[2.5rem] shadow-xl shadow-gray-200/50 p-8 md:p-16 border border-gray-100">
+                        <div className="bg-white rounded-[2rem] lg:rounded-[2.5rem] shadow-xl shadow-gray-200/50 p-6 sm:p-10 md:p-16 border border-gray-100">
 
-                            <div className="flex items-center justify-between border-b border-gray-100 pb-8 mb-12">
+                            <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-gray-100 pb-8 mb-8 lg:mb-12 gap-6 sm:gap-0">
                                 <div>
                                     <p className="text-sm font-bold text-navy-400 uppercase tracking-widest mb-1">Effective Date</p>
                                     <p className="text-navy-900 font-semibold">December 28, 2025</p>
                                 </div>
-                                <div className="text-right">
+                                <div className="text-left sm:text-right">
                                     <p className="text-sm font-bold text-navy-400 uppercase tracking-widest mb-1">Version</p>
                                     <p className="text-navy-900 font-semibold">2.0</p>
                                 </div>
                             </div>
 
-                            <article className="prose prose-lg prose-headings:text-navy-950 prose-p:text-navy-600 prose-a:text-brand-blue-600 prose-li:text-navy-600 max-w-none">
-                                <p className="lead text-xl text-navy-700 font-light mb-12">
+                            <article className="prose prose-base md:prose-lg prose-headings:text-navy-950 prose-p:text-navy-600 prose-a:text-brand-blue-600 prose-li:text-navy-600 max-w-none">
+                                <p className="lead text-lg md:text-xl text-navy-700 font-light mb-8 lg:mb-12">
                                     Echoes Software Technologies ("we", "our", "us") respects your privacy and is committed to protecting the personal information of our users, clients, and visitors. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our websites, applications, products, and services.
                                 </p>
 
-                                <div className="grid md:grid-cols-2 gap-8 my-12 not-prose">
-                                    <div className="bg-blue-50 p-8 rounded-3xl border border-blue-100">
+                                <div className="grid md:grid-cols-2 gap-6 lg:gap-8 my-8 lg:my-12 not-prose">
+                                    <div className="bg-blue-50 p-6 lg:p-8 rounded-3xl border border-blue-100">
                                         <div className="w-12 h-12 bg-brand-blue-100 text-brand-blue-600 rounded-xl flex items-center justify-center mb-6">
                                             <i data-lucide="database" className="w-6 h-6"></i>
                                         </div>
                                         <h4 className="text-xl font-bold text-navy-900 mb-3">Data Collection</h4>
                                         <p className="text-navy-600 text-sm">We collect only essential information required to provide our superior services.</p>
                                     </div>
-                                    <div className="bg-green-50 p-8 rounded-3xl border border-green-100">
+                                    <div className="bg-green-50 p-6 lg:p-8 rounded-3xl border border-green-100">
                                         <div className="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-6">
                                             <i data-lucide="lock" className="w-6 h-6"></i>
                                         </div>
@@ -127,15 +127,15 @@ const PrivacyPolicy: React.FC = () => {
                                 <h3 className="mt-12">Contact Us</h3>
                                 <p>If you have any questions about this Privacy Policy, please contact us:</p>
 
-                                <div className="bg-navy-900 text-white p-8 rounded-3xl not-prose shadow-lg mt-8">
-                                    <div className="flex items-start gap-4">
+                                <div className="bg-navy-900 text-white p-6 sm:p-8 rounded-3xl not-prose shadow-lg mt-8">
+                                    <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                                         <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
                                             <i data-lucide="mail" className="w-6 h-6 text-white"></i>
                                         </div>
                                         <div>
                                             <h4 className="text-xl font-bold text-white mb-2">Privacy Team</h4>
                                             <p className="text-blue-100 mb-4">For any privacy-related inquiries or requests.</p>
-                                            <a href="mailto:echoessoftwaretech@gmail.com" className="text-white hover:text-brand-blue-300 font-bold underline decoration-brand-blue-400 underline-offset-4 transition-colors">
+                                            <a href="mailto:echoessoftwaretech@gmail.com" className="text-white hover:text-brand-blue-300 font-bold underline decoration-brand-blue-400 underline-offset-4 transition-colors break-all">
                                                 echoessoftwaretech@gmail.com
                                             </a>
                                         </div>
