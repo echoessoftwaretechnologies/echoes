@@ -25,7 +25,7 @@ const About: React.FC = () => {
 
             <main className="pt-24">
                 {/* Hero Section */}
-                <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-navy-950">
+                <section className="relative min-h-[75vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden bg-navy-950 pt-24 pb-32">
                     <div className="absolute inset-0">
                         <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-brand-blue-600/30 rounded-full blur-[150px] animate-float-slow"></div>
                         <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-brand-blue-400/20 rounded-full blur-[150px] animate-float-slow" style={{ animationDelay: '-3s' }}></div>

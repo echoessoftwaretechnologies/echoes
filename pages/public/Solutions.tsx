@@ -172,9 +172,9 @@ const Solutions: React.FC = () => {
                     </div>
 
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                        <div className="glass-dark p-16 lg:p-32 rounded-[4rem] border border-white/10 text-center space-y-16 shadow-2xl">
+                        <div className="glass-dark px-6 py-16 md:p-20 lg:p-32 rounded-3xl md:rounded-[4rem] border border-white/10 text-center space-y-16 shadow-2xl">
                             <div className="max-w-4xl mx-auto space-y-8">
-                                <h2 className="text-5xl lg:text-7xl font-black text-white leading-[1.1] tracking-tighter text-balance">
+                                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white leading-[1.1] tracking-tighter text-balance">
                                     Ready to <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue-400 to-brand-blue-200">Scale Your Vision?</span>
                                 </h2>
                                 <p className="text-2xl text-navy-200 leading-relaxed font-light">
@@ -189,7 +189,7 @@ const Solutions: React.FC = () => {
                                     Schedule Consultation
                                 </a>
                                 <a href="https://forms.gle/JNS54uLpgQXWP8NZ9" target="_blank" rel="noopener noreferrer"
-                                    className="w-full sm:w-auto glass-dark hover:bg-white/10 text-white font-black px-12 py-6 rounded-full transition-all duration-500 border border-white/20 text-center text-xl uppercase tracking-widest">
+                                    className="w-full sm:w-auto glass-dark hover:bg-white/10 text-white font-black px-12 py-6 rounded-full transition-all duration-500 border border-white/20 text-center text-lg md:text-xl uppercase tracking-widest">
                                     Request Ecosystem Demo
                                 </a>
                             </div>

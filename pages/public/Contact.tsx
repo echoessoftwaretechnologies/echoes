@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
 
         const { firstName, lastName, phone, email, company, subject, message } = formData;
 
-        const whatsappMessage = `Hey, I'm ${firstName} ${lastName} and my company name is ${company}.
+        const whatsappMessage = `Hey, I'm ${firstName} ${lastName}.
 
 Regarding the subject about ${subject}, I'm contacting you for:
 ${message}
@@ -73,7 +73,7 @@ Email: ${email}`;
 
             <main className="pt-24">
                 {/* Hero Section */}
-                <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-navy-950">
+                <section className="relative min-h-[75vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden bg-navy-950 pt-24 pb-32">
                     <div className="absolute inset-0">
                         <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-brand-blue-600/30 rounded-full blur-[150px] animate-float-slow"></div>
                         <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-brand-blue-400/20 rounded-full blur-[150px] animate-float-slow" style={{ animationDelay: '-3s' }}></div>
@@ -88,7 +88,7 @@ Email: ${email}`;
                             Initialize <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue-400 to-brand-blue-100">Global Dialogue</span>
                         </h1>
                         <p className="text-2xl text-navy-200 max-w-3xl mx-auto font-light leading-relaxed animate-fade-in delay-500">
-                            Partner with elite architecture teams to build your enterprise legacy.
+                            Partner with elite architecture teams to build your enterprise legacy. <br />
                         </p>
                     </div>
                 </section>
@@ -339,29 +339,7 @@ Email: ${email}`;
                         </div>
 
                         {/* Network Visualization */}
-                        <div className="mt-24 text-center">
-                            <div className="inline-flex items-center gap-6 px-10 py-8 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 shadow-xl">
-                                <div className="flex items-center gap-3">
-                                    <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
-                                    <span className="text-white font-bold text-lg">3 Active Hubs</span>
-                                </div>
-                                <div className="w-px h-8 bg-white/20"></div>
-                                <div className="flex items-center gap-3">
-                                    <i data-lucide="globe" className="w-6 h-6 text-brand-blue-400"></i>
-                                    <span className="text-white font-bold text-lg">24/7 Coverage</span>
-                                </div>
-                                <div className="w-px h-8 bg-white/20"></div>
-                                <div className="flex items-center gap-3">
-                                    <i data-lucide="zap" className="w-6 h-6 text-brand-blue-400"></i>
-                                    <span className="text-white font-bold text-lg">Instant Response</span>
-                                </div>
-                                <div className="w-px h-8 bg-white/20"></div>
-                                <div className="flex items-center gap-3">
-                                    <i data-lucide="shield" className="w-6 h-6 text-brand-blue-400"></i>
-                                    <span className="text-white font-bold text-lg">99.98% Uptime</span>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </section>
 
