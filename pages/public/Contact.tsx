@@ -239,7 +239,7 @@ Email: ${email}`;
                         <div className="mt-8 text-center">
                             <div className="inline-flex items-center gap-3 px-6 py-3 bg-brand-blue-50 rounded-full border border-brand-blue-200">
                                 <i data-lucide="map-pin" className="w-5 h-5 text-brand-blue-600"></i>
-                                <span className="text-navy-950 font-medium">Karur, Tamil Nadu, India - 639001</span>
+                                <span className="text-navy-950 font-medium">Karur, Tamil Nadu, India</span>
                             </div>
                         </div>
                     </div>
