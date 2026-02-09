@@ -503,6 +503,140 @@ const Home: React.FC = () => {
                     </div>
                 </section>
 
+                {/* Our Proven Process Section */}
+                <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950 py-32 relative overflow-hidden">
+                    {/* Animated Background Elements */}
+                    <div className="absolute inset-0">
+                        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-blue-500/10 rounded-full blur-[120px] animate-pulse"></div>
+                        <div className="absolute bottom-1/3 right-1/3 w-80 h-80 bg-brand-blue-600/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+                        <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-brand-blue-400/10 rounded-full blur-[80px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+                    </div>
+
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="text-center mb-24 space-y-8">
+                            <div className="inline-block px-8 py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-md animate-fade-in-down">
+                                <span className="text-brand-blue-400 font-black tracking-[0.3em] text-xs uppercase">OUR METHODOLOGY</span>
+                            </div>
+                            <h2 className="text-5xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1]">
+                                Our Proven <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-400 to-cyan-400">Process</span>
+                            </h2>
+                            <p className="text-xl text-navy-200 max-w-3xl mx-auto font-light leading-relaxed">
+                                A systematic approach that ensures every project delivers exceptional results.
+                            </p>
+                        </div>
+
+                        <div className="relative">
+                            {/* Process Timeline Line */}
+                            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-brand-blue-500/30 to-cyan-500/30 hidden lg:block"></div>
+                            
+                            <div className="space-y-16">
+                                {[
+                                    {
+                                        step: "01",
+                                        title: "Discovery & Analysis",
+                                        description: "Deep dive into your business needs, technical requirements, and success metrics. We analyze market positioning and competitive landscape.",
+                                        icon: "search",
+                                        position: "left"
+                                    },
+                                    {
+                                        step: "02",
+                                        title: "Strategy & Planning",
+                                        description: "Develop comprehensive technical architecture and project roadmap. Define milestones, resource allocation, and risk mitigation strategies.",
+                                        icon: "layout",
+                                        position: "right"
+                                    },
+                                    {
+                                        step: "03",
+                                        title: "Design & Development",
+                                        description: "Create intuitive user interfaces and robust backend systems. Implement with modern frameworks and best practices for scalability.",
+                                        icon: "code",
+                                        position: "left"
+                                    },
+                                    {
+                                        step: "04",
+                                        title: "Testing & Quality",
+                                        description: "Rigorous testing across all devices and platforms. Performance optimization, security audits, and user acceptance testing.",
+                                        icon: "shield-check",
+                                        position: "right"
+                                    },
+                                    {
+                                        step: "05",
+                                        title: "Deployment & Launch",
+                                        description: "Seamless deployment to production environments with zero downtime. Monitor performance and gather initial user feedback.",
+                                        icon: "rocket",
+                                        position: "left"
+                                    },
+                                    {
+                                        step: "06",
+                                        title: "Support & Optimization",
+                                        description: "Ongoing maintenance, performance monitoring, and continuous improvements. 24/7 support and regular enhancement updates.",
+                                        icon: "activity",
+                                        position: "right"
+                                    }
+                                ].map((process, i) => (
+                                    <div key={i} className={`flex items-center ${process.position === 'left' ? 'lg:flex-row' : 'lg:flex-row-reverse'} flex-col gap-12`}> 
+                                        {/* Step Content */}
+                                        <div className={`lg:w-5/12 ${process.position === 'left' ? 'lg:text-right' : 'lg:text-left'} text-center`}>
+                                            <div className="inline-flex items-center gap-3 mb-6">
+                                                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-blue-500 to-cyan-500 flex items-center justify-center text-white font-black text-lg">
+                                                    {process.step}
+                                                </div>
+                                                <div className="h-px bg-gradient-to-r from-brand-blue-500/30 to-cyan-500/30 w-16 hidden lg:block"></div>
+                                            </div>
+                                            
+                                            <h3 className="text-3xl font-black text-white mb-6 tracking-tight group-hover:text-brand-blue-400 transition-colors">
+                                                {process.title}
+                                            </h3>
+                                            <p className="text-navy-200 font-light leading-relaxed text-lg">
+                                                {process.description}
+                                            </p>
+                                        </div>
+
+                                        {/* Step Icon */}
+                                        <div className="lg:w-2/12 flex justify-center">
+                                            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-brand-blue-500/20 to-cyan-500/20 flex items-center justify-center backdrop-blur-sm border border-white/10">
+                                                <i data-lucide={process.icon} className="w-12 h-12 text-brand-blue-400"></i>
+                                            </div>
+                                        </div>
+
+                                        {/* Empty column for spacing */}
+                                        <div className="lg:w-5/12 hidden lg:block"></div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Process Benefits */}
+                        <div className="mt-32 grid md:grid-cols-3 gap-8">
+                            {[
+                                {
+                                    title: "Predictable Delivery",
+                                    description: "Structured approach ensures on-time, on-budget project completion with clear milestone tracking.",
+                                    icon: "calendar-check"
+                                },
+                                {
+                                    title: "Quality Assurance",
+                                    description: "Comprehensive testing protocols guarantee bug-free, high-performance applications.",
+                                    icon: "check-circle"
+                                },
+                                {
+                                    title: "Risk Mitigation",
+                                    description: "Proactive planning and continuous monitoring reduce project risks and ensure success.",
+                                    icon: "shield"
+                                }
+                            ].map((benefit, i) => (
+                                <div key={i} className="bg-white/5 backdrop-blur-xl p-8 rounded-2xl border border-white/10 text-center group hover:border-brand-blue-500/30 transition-all duration-300">
+                                    <div className="w-16 h-16 bg-gradient-to-br from-brand-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-brand-blue-500/30 group-hover:to-cyan-500/30 transition-all">
+                                        <i data-lucide={benefit.icon} className="w-8 h-8 text-brand-blue-400"></i>
+                                    </div>
+                                    <h3 className="text-2xl font-black text-white mb-4">{benefit.title}</h3>
+                                    <p className="text-navy-200 font-light leading-relaxed">{benefit.description}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 {/* FAQ Section */}
                 < FAQ />
 
